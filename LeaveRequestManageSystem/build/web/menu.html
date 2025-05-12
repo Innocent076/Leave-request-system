@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Log in</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -19,10 +19,11 @@ and open the template in the editor.
                 justify-content: center;
                 align-items: center;
                 margin: 0;
+                padding: 0;
                 
             }
             
-            .index-container{
+            .login-container{
                 background: #fff;
                 padding: 30px 40px;
                 border-radius: 8px;
@@ -91,18 +92,41 @@ and open the template in the editor.
             
             
             
+            
         </style>
     </head>
     <body>
-        <div class="index-container">
-        <h1>Welcome</h1>
-        <p>Please click on the following to log in </p>
+        <div class="login-container">
+        <h2>Login</h2>
+        <form action="LoginServlet.do" method="POST">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" required=""></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="text" name="password" required=""></td>
+                </tr>
+                <tr>
+                    <td>Role:</td>
+                    <td>
+                        <select name="role">
+                            <option value="employee">Employee</option>
+                            <option value="manager">Manager</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Login"></td>
+                </tr>
+            </table>
+        </form>
         
-        <ul>
-            <li><a href="menu.html">Log in</a></li>
-             
-        </ul>
         </div>
+         
+         
         <footer>
             <p>
                 Leave management System - Submit, track and manage employee leave requests easily.
