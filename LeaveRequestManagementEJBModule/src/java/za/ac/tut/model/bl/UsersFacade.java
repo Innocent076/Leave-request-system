@@ -8,14 +8,14 @@ package za.ac.tut.model.bl;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import za.ac.tut.model.entity.User;
+import za.ac.tut.model.entity.Users;
 
 /**
  *
  * @author SIBUSISO
  */
 @Stateless
-public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal {
+public class UsersFacade extends AbstractFacade<Users> implements UsersFacadeLocal {
 
     @PersistenceContext(unitName = "LeaveManagementEJBModulePU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal 
         return em;
     }
 
-    public UserFacade() {
-        super(User.class);
+    public UsersFacade() {
+        super(Users.class);
     }
     
 }

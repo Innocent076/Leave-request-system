@@ -19,25 +19,25 @@ import javax.persistence.Temporal;
  * @author SIBUSISO
  */
 @Entity
-public class User implements Serializable {
+public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Column(name = "Username")
-    private String id;
+    private String username;
     @Column(name = "Password")
     private String password;
     @Column(name = "Role")
     private String role;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    @Column(name = "Create date")
+    @Column(name = "Create_date")
     private Date createDate;
 
-    public User() {
+    public Users() {
     }
 
-    public User(String id, String password, String role, Date createDate) {
-        this.id = id;
+    public Users(String id, String password, String role, Date createDate) {
+        this.username = id;
         this.password = password;
         this.role = role;
         this.createDate = createDate;
@@ -67,29 +67,29 @@ public class User implements Serializable {
         this.createDate = createDate;
     }
 
-    public String getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (username != null ? username.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof User)) {
+        // TODO: Warning - this method won't work in the case the username fields are not set
+        if (!(object instanceof Users)) {
             return false;
         }
-        User other = (User) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        Users other = (Users) object;
+        if ((this.username == null && other.username != null) || (this.username != null && !this.username.equals(other.username))) {
             return false;
         }
         return true;
@@ -97,7 +97,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "za.ac.tut.model.entity.User[ id=" + id + " ]";
+        return "za.ac.tut.model.entity.User[ id=" + username + " ]";
     }
     
 }
