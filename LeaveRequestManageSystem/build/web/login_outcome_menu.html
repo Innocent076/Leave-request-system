@@ -6,33 +6,37 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Log in</title>
+        <title>Main Menu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
                 font-family:Arial, sans_serif;
                 background: #f4f4f4;
-                display:flex;
+                display: flex;
                 flex-direction: column;
-                height: 100vh;
-                justify-content: center;
                 align-items: center;
                 margin: 0;
+                padding-bottom: 80px
                 
             }
             
-            .index-container{
+            .menu-container{
                 background: #fff;
-                padding: 30px 40px;
+                padding: 30px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                width: 350px;
+                margin: auto;
+                
             }
             
             h1{
                 text-align: center;
                 margin-bottom: 20px;
+                color:#333;
+            }
+            h2{
+                text-align: center;
                 color:#333;
             }
             table{
@@ -89,19 +93,44 @@ and open the template in the editor.
                 font-size: 14px;
             }
             
+            p{
+                text-align: center;
+            }
+            
             
             
         </style>
     </head>
     <body>
-        <div class="index-container">
-        <h1>Welcome</h1>
-        <p>Please click on the following to log in </p>
+        <div class="menu-container">
+        <h1>Main Menu</h1>
         
-        <ul>
-            <li><a href="menu.html">Log in</a></li>
-             
-        </ul>
+        <p>Select an action:</p>
+        
+        <h2>Employee</h2>
+        <p>
+            <a href="employee_leave_request.html">Request leave</a><br><br><br>
+            <a href="status_view.html">View Status</a> 
+            
+        </p>
+        
+        <h2>Manager</h2>
+        
+        
+        <p>
+            <a href="manager_leave_requests.html">Pending requests</a><br><br><br>
+            <a href="manager_view.html">All requests</a> 
+            
+        </p>
+        <br>
+         
+          
+        <br>
+        <p>
+            <a href="log_out.html">To log out.</a>
+        </p>
+        
+        
         </div>
         <footer>
             <p>
@@ -110,4 +139,6 @@ and open the template in the editor.
             </p>
         </footer>
     </body>
+    
+    
 </html>

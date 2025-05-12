@@ -1,65 +1,68 @@
+<%-- 
+    Document   : manager_decision_outcome
+    Created on : 10 May 2025, 9:00:29 PM
+    Author     : Jacob
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Log in</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Decision outcome</title>
         <style>
             body{
                 font-family:Arial, sans_serif;
                 background: #f4f4f4;
-                display:flex;
+                padding: 20px;
+                display: flex;
                 flex-direction: column;
-                height: 100vh;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-                
             }
             
-            .index-container{
+            .table6-container{
+                margin: auto;
                 background: #fff;
-                padding: 30px 40px;
+                padding: 30px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                width: 350px;
+                width: 80%;
             }
             
             h1{
                 text-align: center;
-                margin-bottom: 20px;
+             
                 color:#333;
             }
-            table{
+            form table{
                 width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
             }
-            td{
-                padding: 8px;
+            td,th{
+                border: 1px solid #ddd;
+                padding: 12px;
             }
-            input[type="text"],
-            input[type="password"],
-            select{
-                width: 100%;
-                padding: 8px;
-                margin-top: 4px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-            input[type="submit"]{
-                width: 100%;
-                padding: 10px;
+            th{
                 background-color: #007BFF;
-                border: none;
                 color: white;
-                font-weight: bold;
-                border-radius: 4px;
+            }
+            
+            select{
+                padding: 6px;
+                border-radius:4px;
+                border: 1px solid #ccc;
+            }
+            
+             
+            input[type="submit"]{
+                padding: 8px 14px;
+                background-color: #007BFF;
+                margin-top: 10px;
                 cursor: pointer;
-                margin-top: 15px;
+                border-radius: 4px;
+                border: none;
+                font-weight: bold;
+                color: white;  
             }
             input[type="submit"]:hover{
                 background-color: #0056b3; 
@@ -91,17 +94,31 @@ and open the template in the editor.
             
             
             
+            
         </style>
     </head>
     <body>
-        <div class="index-container">
-        <h1>Welcome</h1>
-        <p>Please click on the following to log in </p>
+        <div class="table6-container">
+        <h1>Decision outcome</h1>
         
-        <ul>
-            <li><a href="menu.html">Log in</a></li>
+        <%
+            Long requestId = request.getAttribute("requestId");
+            String decision = request.getAttribute("decision");
+            
+        %>
+        
+        <p>
+            Request: <%=requestId%> <br> Decision: <%=decision%>
+        </p>
+        
+        <p>
+            <a href="login_outcome_menu.html">Back to the menu.</a>  
              
-        </ul>
+        </p>
+        <br>
+        <p>
+            <a href="log_out.html">To log out.</a>
+        </p>
         </div>
         <footer>
             <p>
