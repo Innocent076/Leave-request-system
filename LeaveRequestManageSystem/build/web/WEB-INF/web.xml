@@ -36,6 +36,14 @@
         <servlet-name>UpdateStatusServlet</servlet-name>
         <servlet-class>za.ac.tut.web.UpdateStatusServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.loginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreatLeaveServet</servlet-name>
+        <servlet-class>za.ac.tut.web.CreatLeaveServet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
         <url-pattern>/AddStudentServlet.do</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>UpdateStatusServlet</servlet-name>
         <url-pattern>/UpdateStatusServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreatLeaveServet</servlet-name>
+        <url-pattern>/CreatLeaveServet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

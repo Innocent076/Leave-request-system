@@ -14,14 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author SIBUSISO
+ * @author pc
  */
-public class StartSessionServlet extends HttpServlet {
+public class loginServlet extends HttpServlet {
 
-    
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        request.getRequestDispatcher("menu.jsp").forward(request, response);
     }
+
+
 }
