@@ -6,60 +6,58 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Log in</title>
+        <title>My Leave Request</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
                 font-family:Arial, sans_serif;
                 background: #f4f4f4;
-                display:flex;
+                padding: 20px;
+                display: flex;
                 flex-direction: column;
-                height: 100vh;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-                
             }
             
-            .index-container{
+            .table1-container{
+                margin: auto;
                 background: #fff;
-                padding: 30px 40px;
+                padding: 30px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                width: 350px;
+                width: 80%;
             }
             
             h1{
-                text-align: center;
-                margin-bottom: 20px;
+                text-align: center; 
                 color:#333;
             }
             table{
                 width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
             }
-            td{
-                padding: 8px;
+            td,th{
+                 
+                padding: 12px;
+                text-align: center;
             }
-            input[type="text"],
-            input[type="password"],
-            select{
-                width: 100%;
-                padding: 8px;
-                margin-top: 4px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
+            th{
+                background-color: #007BFF;
+                color: white
             }
             input[type="submit"]{
-                width: 100%;
+                width: 150px;
                 padding: 10px;
+                margin-top: 4px;
+                border-radius: 4px;
+                border: 1px solid #ccc
+            }
+            input[type="submit"]{
                 background-color: #007BFF;
                 border: none;
-                color: white;
                 font-weight: bold;
-                border-radius: 4px;
+                color: white; 
                 cursor: pointer;
-                margin-top: 15px;
             }
             input[type="submit"]:hover{
                 background-color: #0056b3; 
@@ -94,14 +92,27 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <div class="index-container">
-        <h1>Welcome</h1>
-        <p>Please click on the following to log in </p>
+        <div class="table1-container">
+        <h1>My Leave Requests</h1>
         
-        <ul>
-            <li><a href="menu.html">Log in</a></li>
+        <p>Please click on the button below to see the status of your requests:</p>
+        <form action="StatusViewServlet.do" method="GET">
+            <table>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="View Requests"></td>
+                </tr>
+            </table>
+        </form>
+        
+        <p>
+            <a href="login_outcome_menu.html">Back to the menu.</a>  
              
-        </ul>
+        </p>
+        <br>
+        <p>
+            <a href="log_out.html">To log out.</a>
+        </p>
         </div>
         <footer>
             <p>
