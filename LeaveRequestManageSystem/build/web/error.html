@@ -1,6 +1,6 @@
 <%-- 
-    Document   : manager_decision_outcome
-    Created on : 10 May 2025, 9:00:29 PM
+    Document   : error
+    Created on : 12 May 2025, 9:52:15 AM
     Author     : Jacob
 --%>
 
@@ -9,60 +9,59 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Decision outcome</title>
+        <title>Error Page</title>
         <style>
             body{
                 font-family:Arial, sans_serif;
                 background: #f4f4f4;
-                padding: 20px;
-                display: flex;
+                display:flex;
                 flex-direction: column;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                
             }
             
-            .table6-container{
-                margin: auto;
+            .error-container{
                 background: #fff;
-                padding: 30px;
+                padding: 30px 40px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                width: 80%;
+                width: 350px;
             }
             
             h1{
                 text-align: center;
-             
+                margin-bottom: 20px;
                 color:#333;
             }
-            form table{
+            table{
                 width: 100%;
-                border-collapse: collapse;
-                margin-top: 20px;
             }
-            td,th{
-                border: 1px solid #ddd;
-                padding: 12px;
+            td{
+                padding: 8px;
             }
-            th{
-                background-color: #007BFF;
-                color: white;
-            }
-            
+            input[type="text"],
+            input[type="password"],
             select{
-                padding: 6px;
-                border-radius:4px;
+                width: 100%;
+                padding: 8px;
+                margin-top: 4px;
                 border: 1px solid #ccc;
-            }
-            
-             
-            input[type="submit"]{
-                padding: 8px 14px;
-                background-color: #007BFF;
-                margin-top: 10px;
-                cursor: pointer;
                 border-radius: 4px;
+            }
+            input[type="submit"]{
+                width: 100%;
+                padding: 10px;
+                background-color: #007BFF;
                 border: none;
+                color: white;
                 font-weight: bold;
-                color: white;  
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 15px;
             }
             input[type="submit"]:hover{
                 background-color: #0056b3; 
@@ -96,30 +95,23 @@
             
             
         </style>
+        </style>
     </head>
     <body>
-        <div class="table6-container">
-        <h1>Decision outcome</h1>
+        <div class="error-container">
+        <h1>Error</h1>
+         
         
-        <%
-            Long requestId = request.getAttribute("requestId");
-            String decision = request.getAttribute("decision");
-            
-        %>
+        <h2 style="text-align: center; color: red">
+            Oops! Something went wrong.
+        </h2>
+        <p style="text-align: center;">Please try again or contact support.</p>
         
-        <p>
-            Request: <%=requestId%> <br> Decision: <%=decision%>
-        </p>
-        
-        <p>
-            <a href="login_outcome_menu.html">Back to the menu.</a>  
-             
-        </p>
-        <br>
-        <p>
-            <a href="log_out.html">To log out.</a>
-        </p>
+        <div style="text-align: center;">
+            <a href="login_outcome_menu.html">Back to home.</a>
         </div>
+        </div>
+        
         <footer>
             <p>
                 Leave management System - Submit, track and manage employee leave requests easily.
