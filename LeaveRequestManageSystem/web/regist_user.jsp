@@ -1,68 +1,59 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Manager Leave Requests</title>
+<head>
+        <title>Register</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
                 font-family:Arial, sans_serif;
                 background: #f4f4f4;
-                padding: 20px;
-                display: flex;
-                flex-direction: column
+                display:flex;
+                flex-direction: column;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding: 0;
                 
             }
             
-            .table3-container{
-                margin: auto;
+            .register-container{
                 background: #fff;
-                padding: 30px;
+                padding: 30px 40px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                width: 80%;
+                width: 350px;
             }
             
             h1{
                 text-align: center;
-             
+                margin-bottom: 20px;
                 color:#333;
             }
-            form table{
+            table{
                 width: 100%;
-                border-collapse: collapse;
-                margin-top: 20px;
             }
-            td,th{
-                border: 1px solid #ddd;
-                padding: 12px;
+            td{
+                padding: 8px;
             }
-            th{
-                background-color: #007BFF;
-                color: white;
-            }
-            
+            input[type="text"],
+            input[type="password"],
             select{
-                padding: 6px;
-                border-radius:4px;
+                width: 100%;
+                padding: 8px;
+                margin-top: 4px;
                 border: 1px solid #ccc;
-            }
-            
-             
-            input[type="submit"]{
-                padding: 8px 14px;
-                background-color: #007BFF;
-                margin-top: 10px;
-                cursor: pointer;
                 border-radius: 4px;
+            }
+            input[type="submit"]{
+                width: 100%;
+                padding: 10px;
+                background-color: #007BFF;
                 border: none;
+                color: white;
                 font-weight: bold;
-                color: white;  
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 15px;
             }
             input[type="submit"]:hover{
                 background-color: #0056b3; 
@@ -98,43 +89,38 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <div class="table3-container">
-        <h1>Manager Leave Requests</h1>
-        
-        <p>Please select an option</p>
-        
-        <form action="ManagerRequestsServlet.do" method="POST">
+        <div class="register-container">
+            <h1>
+                Register
+            </h1>
+            <p>
+                Please enter the following information:
+            </p>
+            <form action="CreateProfileServlet.do" method="POST">
             <table>
                 <tr>
-                    <td>Request ID</td>
-                    <td><input type="number" name="requestId" required=""></td>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" required=""></td>
                 </tr>
                 <tr>
-                    <td>Action</td>
+                    <td>Password</td>
+                    <td><input type="text" name="password" required=""></td>
+                </tr>
+                <tr>
+                    <td>Role:</td>
                     <td>
-                        <select name="decision">
-                            <option value="approve">Approve</option>
-                            <option value="reject">Reject</option>
+                        <select name="role">
+                            <option value="employee">Employee</option>
+                            <option value="manager">Manager</option>
                         </select>
                     </td>
                 </tr>
-                 
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="submit" value="Register"></td>
                 </tr>
             </table>
         </form>
-        
-        <p>
-            <a href="login_outcome_menu.html">Back to the menu.</a>  
-        </p>
-        <br>
-        <p>
-            <a href="log_out.html">To log out.</a>
-        </p>
-         
-        
         </div>
         <footer>
             <p>
@@ -143,4 +129,3 @@ and open the template in the editor.
             </p>
         </footer>
     </body>
-</html>
