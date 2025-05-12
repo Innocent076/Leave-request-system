@@ -37,18 +37,18 @@ public class LeaveFacade extends AbstractFacade<Leave> implements LeaveFacadeLoc
     }
 
     @Override
-    public String getLeaveStatus(Long id) { 
+    public Leave getLeaveStatus(Long id) { 
         
-        Query query = em.createQuery("SELECT l.status.name FROM LeaveRequest l WHERE l.id = :id");
+        Query query = em.createQuery("SELECT l FROM Leave l WHERE l.id = :id");
         query.setParameter("id", id);
-        String status = (String)query.getSingleResult();
+        Leave status = (Leave)query.getSingleResult();
         return status;
     }
 
     @Override
     public List<Leave> findPendingLeave() {
         
-        Query query = em.createQuery("SELECT l FROM Leave l WHERE l.status.name = :statusName");
+        Query query = em.createQuery("SELECT l FROM Leave l WHERE l.status = :statusName");
         query.setParameter("statusName", "PENDING");
         
         return query.getResultList();
