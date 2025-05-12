@@ -1,42 +1,39 @@
+<%-- 
+    Document   : login
+    Created on : 12 May 2025, 9:22:27 PM
+    Author     : pc
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Main Menu</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
             body{
                 font-family:Arial, sans_serif;
                 background: #f4f4f4;
-                display: flex;
+                display:flex;
                 flex-direction: column;
+                height: 100vh;
+                justify-content: center;
                 align-items: center;
                 margin: 0;
-                padding-bottom: 80px
+                padding: 0;
                 
             }
             
-            .menu-container{
+            .login-container{
                 background: #fff;
-                padding: 30px;
+                padding: 30px 40px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                margin: auto;
-                
+                width: 350px;
             }
             
             h1{
                 text-align: center;
                 margin-bottom: 20px;
-                color:#333;
-            }
-            h2{
-                text-align: center;
                 color:#333;
             }
             table{
@@ -92,53 +89,27 @@ and open the template in the editor.
                 width: 100%;
                 font-size: 14px;
             }
-            
-            p{
-                text-align: center;
-            }
-            
-            
-            
         </style>
+        <title>Login Page</title>
     </head>
     <body>
-        <div class="menu-container">
-        <h1>Main Menu</h1>
+        <h1>Login details</h1>
         
-        <p>Select an action:</p>
-        
-        <h2>Employee</h2>
-        <p>
-            <a href="employee_leave_request.html">Request leave</a><br><br><br>
-            <a href="status_view.html">View Status</a> 
-            
-        </p>
-        
-        <h2>Manager</h2>
-        
-        
-        <p>
-            <a href="manager_leave_requests.html">Pending requests</a><br><br><br>
-            <a href="manager_view.html">All requests</a> 
-            
-        </p>
-        <br>
-         
-          
-        <br>
-        <p>
-            <a href="log_out.html">To log out.</a>
-        </p>
-        
-        
-        </div>
-        <footer>
-            <p>
-                Leave management System - Submit, track and manage employee leave requests easily.
-                Designed for both employees and managers.
-            </p>
-        </footer>
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" required=""/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required=""/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="LOGIN"/></td>
+                </tr>
+            </table>
+        </form>
     </body>
-    
-    
 </html>

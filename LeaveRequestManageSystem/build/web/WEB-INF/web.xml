@@ -1,77 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <servlet>
-        <servlet-name>AddStudentServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.AddStudentServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>FindStudentServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.FindStudentServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ViewStudentsServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.ViewStudentsServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>RemoveStudentServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.RemoveStudentServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>FindStudentToEditServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.FindStudentToEditServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>EditStudentServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.EditStudentServlet</servlet-class>
-    </servlet>
+    
     <servlet>
         <servlet-name>StartSessionServlet</servlet-name>
         <servlet-class>za.ac.tut.web.StartSessionServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>CreateProfileServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.CreateProfileServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>UpdateStatusServlet</servlet-name>
-        <servlet-class>za.ac.tut.web.UpdateStatusServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddStudentServlet</servlet-name>
-        <url-pattern>/AddStudentServlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>FindStudentServlet</servlet-name>
-        <url-pattern>/FindStudentServlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ViewStudentsServlet</servlet-name>
-        <url-pattern>/ViewStudentsServlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RemoveStudentServlet</servlet-name>
-        <url-pattern>/RemoveStudentServlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>FindStudentToEditServlet</servlet-name>
-        <url-pattern>/FindStudentToEditServlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditStudentServlet</servlet-name>
-        <url-pattern>/EditStudentServlet.do</url-pattern>
-    </servlet-mapping>
+
+
     <servlet-mapping>
         <servlet-name>StartSessionServlet</servlet-name>
         <url-pattern>/StartSessionServlet.do</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CreateProfileServlet</servlet-name>
-        <url-pattern>/CreateProfileServlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UpdateStatusServlet</servlet-name>
-        <url-pattern>/UpdateStatusServlet.do</url-pattern>
-    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
