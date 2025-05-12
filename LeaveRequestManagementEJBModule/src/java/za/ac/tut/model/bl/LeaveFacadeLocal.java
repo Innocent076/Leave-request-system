@@ -32,7 +32,7 @@ public interface LeaveFacadeLocal {
     
     void createLeave(Leave leave);
     
-    String getLeaveStatus(Long id);
+    Leave getLeaveStatus(Long id);
     
     List<Leave> findPendingLeave();
     

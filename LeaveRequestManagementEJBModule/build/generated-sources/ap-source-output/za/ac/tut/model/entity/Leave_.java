@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import za.ac.tut.model.entity.Status;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2025-05-12T19:31:50")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2025-05-12T20:03:32")
 @StaticMetamodel(Leave.class)
 public class Leave_ { 
 
